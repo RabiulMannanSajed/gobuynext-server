@@ -12,13 +12,14 @@ async function main() {
   try {
     console.log("Connecting to MongoDB...");
     await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.z68se.mongodb.net/gobuynext?retryWrites=true&w=majority&appName=Cluster0`,
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.evnoieq.mongodb.net/gobuynext?retryWrites=true&w=majority&appName=Cluster0`,
     );
 
     console.log("MongoDB connected successfully!");
 
     app.listen(process.env.PORT, () => {
       console.log(`App listening on port ${process.env.PORT}`);
+      console.log(process.env.DB_USER);
     });
   } catch (error) {
     console.error("Error connecting to MongoDB:", error.message);

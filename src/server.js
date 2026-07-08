@@ -19,7 +19,6 @@ async function main() {
 
     app.listen(process.env.PORT, () => {
       console.log(`App listening on port ${process.env.PORT}`);
-      console.log(process.env.DB_USER);
     });
   } catch (error) {
     console.error("Error connecting to MongoDB:", error.message);

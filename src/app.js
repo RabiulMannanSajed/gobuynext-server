@@ -17,7 +17,7 @@ app.use("/api/v1/gobuynext", router);
 const getController = (req, res) => {
   res.status(200).json({
     success: true,
-    message: "Gobuynext is running ",
+    message: "Gobuynext is running now",
   });
 };
 

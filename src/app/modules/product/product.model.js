@@ -17,7 +17,25 @@ const ProductSchema = new Schema({
   },
   productWeightUnit: {
     type: String,
-    enum: ["kg", "g"],
+    enum: [
+      "kg",
+      "g",
+      "mg",
+      "l",
+      "ml",
+      "piece",
+      "box",
+      "packet",
+      "dozen",
+      "set",
+      "bundle",
+      "carton",
+      "bottle",
+      "jar",
+      "can",
+      "roll",
+      "pair",
+    ],
   },
 
   productOfficialBrand: {

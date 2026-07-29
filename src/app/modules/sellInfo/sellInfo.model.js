@@ -19,7 +19,10 @@ const SellSchema = new Schema(
       required: true,
       trim: true,
     },
-
+    thana: {
+      type: String,
+      required: true,
+    },
     address: {
       type: String,
       required: true,

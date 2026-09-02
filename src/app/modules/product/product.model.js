@@ -15,6 +15,7 @@ const ProductSchema = new Schema({
   productWeight: {
     type: String,
   },
+
   productWeightUnit: {
     type: String,
     enum: [

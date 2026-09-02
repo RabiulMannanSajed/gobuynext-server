@@ -5,6 +5,7 @@ import { AuthRoute } from "../modules/auth/auth.route.js";
 import { SellInfoRoute } from "../modules/sellInfo/sellInfo.route.js";
 import { DashboardAnalyticsRoute } from "../modules/dashboardAnalytices/dashboardAnalytices.route.js";
 import { ReviewRoutes } from "../modules/review/review.route.js";
+import { brandCategoryRoute } from "../modules/Category/brandCategory.route.js";
 
 const router = Router();
 
@@ -25,9 +26,15 @@ const moduleRouters = [
   },
 
   {
+    path: "/category",
+    route: brandCategoryRoute,
+  },
+
+  {
     path: "/sell",
     route: SellInfoRoute,
   },
+
   {
     path: "/review",
     route: ReviewRoutes,

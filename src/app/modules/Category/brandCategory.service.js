@@ -49,6 +49,11 @@ export const getAllBrandCategoriesFromDB = async (query = {}) => {
   }
 
   const result = await BrandCategory.find(filter)
+    .populate({
+      path: "productId",
+      select:
+        "productName productImage price discountPrice productOfficialBrand productCategory productBrand productSubBrand sku",
+    })
     .sort({ createdAt: -1 })
     .lean();
 
@@ -59,7 +64,7 @@ export const getBrandCategoryByIdFromDB = async (id) => {
   const result = await BrandCategory.findOne({
     _id: id,
     isDeleted: false,
-  });
+  }).populate("productId");
 
   if (!result) {
     throw new Error("Brand category not found");

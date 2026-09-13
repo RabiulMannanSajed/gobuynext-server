@@ -6,6 +6,7 @@ import { SellInfoRoute } from "../modules/sellInfo/sellInfo.route.js";
 import { DashboardAnalyticsRoute } from "../modules/dashboardAnalytices/dashboardAnalytices.route.js";
 import { ReviewRoutes } from "../modules/review/review.route.js";
 import { brandCategoryRoute } from "../modules/Category/brandCategory.route.js";
+import { bannerRoute } from "../modules/banner/banner.route.js";
 
 const router = Router();
 
@@ -33,6 +34,10 @@ const moduleRouters = [
   {
     path: "/sell",
     route: SellInfoRoute,
+  },
+  {
+    path: "/banner",
+    route: bannerRoute,
   },
 
   {
